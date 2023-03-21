@@ -4,7 +4,7 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,10 +12,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 public class OrderItem {
     @Id
-    private Long id;
-    private Long productId;
+    private String id;
+    private String productId;
     private double price;
     private int quantity;
-    private Order order;
 
 }

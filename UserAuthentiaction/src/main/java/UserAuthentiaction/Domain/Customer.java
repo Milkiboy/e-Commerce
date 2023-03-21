@@ -6,6 +6,9 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Document
 @Data
 @NoArgsConstructor
@@ -14,8 +17,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 public class Customer {
     @Id
-    private long customerNumber;
-    private String name;
-    private Contact contact;
-    private Address address;
+    private String id;
+
+    private String firstName;
+
+    private String lastName;
+
+    private String email;
+
+    private String password;
+
+    private List<Address> addresses = new ArrayList<>();
+
+    private List<PaymentMethod> paymentMethods = new ArrayList<>();
+
 }
