@@ -14,9 +14,11 @@ import java.time.LocalDate;
 @Document
 public class Payment {
     @Id
-    private long paymentNumber;
+    private String id;
+    private String orderNumber;
+    private String customerNumber;
+    private String paymentMethod;
     private LocalDate date;
+    private PaymentStatus status;
     private double amount;
-    private long orderNumber;
-    private long customerNumber;
 }

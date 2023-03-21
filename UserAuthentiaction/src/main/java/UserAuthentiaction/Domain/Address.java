@@ -11,8 +11,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 public class Address {
+
     private String street;
+
     private String city;
-    private int zip;
+
+    private String state;
+
+    private String country;
+
+    private String zipCode;
+
+
 
 }
